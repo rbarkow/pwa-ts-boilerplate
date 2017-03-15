@@ -1,0 +1,48 @@
+{
+  "name": "progressive-web-app-boilerplate",
+  "version": "0.0.1",
+  "description": "PWA Boilerplate with webpack, browsersync, sass and bootstrap",
+  "main": "bundle.js",
+  "scripts": {
+    "start": "webpack --watch",
+    "build": "webpack -p",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "pwa",
+    "boilerplate",
+    "browsersync",
+    "webpack",
+    "sass",
+    "typescript"
+  ],
+  "author": "René Barkow",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jquery": "^2.0.41",
+    "babel-core": "^6.13.2",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.13.2",
+    "browser-sync": "^2.14.0",
+    "browser-sync-webpack-plugin": "^1.1.2",
+    "clean-webpack-plugin": "^0.1.10",
+    "copy-webpack-plugin": "^3.0.1",
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.9.0",
+    "html-loader": "^0.4.3",
+    "html-webpack-plugin": "^2.22.0",
+    "node-sass": "^3.8.0",
+    "sass-loader": "^4.0.0",
+    "style-loader": "^0.13.1",
+    "ts-loader": "^2.0.1",
+    "typescript": "^2.2.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.2"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.6",
+    "font-awesome": "^4.6.3",
+    "jquery": "^3.1.0"
+  },
+  "repository": "https://github.com/pixelschiff/pwa-ts-boilerplate.git"
+}

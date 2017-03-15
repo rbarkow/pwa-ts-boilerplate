@@ -1,0 +1,27 @@
+{
+	"version": "1.0.0",
+	"name": "PWA Boilerplate",
+	"launch_path": "/index.html",
+	"description": "PWA Boilerplate with webpack, browsersync, sass and bootstrap",
+	"icons": {
+		"128": "/img/icon-128x128.png"
+	},
+	"developer": {
+		"name": "René Barkow",
+		"url": "https://github.com/pixelschiff"
+	},
+	"installs_allowed_from": [
+		"*"
+	],
+	"default_locale": "en",
+	"locales": {
+		"en": {
+			"name": "PWA Boilerplate",
+			"description": PWA Boilerplate with webpack, browsersync, sass and bootstrap",
+		},
+		"de": {
+			"name": "PWA Boilerplate",
+			"description": PWA Boilerplate mit webpack, browsersync, sass und bootstrap",
+		}
+	}
+}
