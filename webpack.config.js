@@ -1,9 +1,10 @@
+var path = require('path');
+var webpack = require('webpack');
 var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var path = require('path');
-var webpack = require('webpack');
+var SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 
 module.exports = {
 	context: path.resolve('./src'),
@@ -11,6 +12,7 @@ module.exports = {
 	output: {
 		path: path.resolve('./dist/'),
 		filename: 'js/bundle.js',
+		//filename: 'js/[name]-[hash].js',
 		publicPath: '/'
 	},
 	module: {
@@ -64,7 +66,17 @@ module.exports = {
 			},
 			port: 3000,
 			host: 'localhost',
-			open: false
+			open: true
+		}),
+		new SWPrecacheWebpackPlugin({
+			cacheId: 'pwa-boilerplate',
+			filename: 'service-worker.js',
+			maximumFileSizeToCacheInBytes: 4194304,
+			minify: true,
+			runtimeCaching: [{
+				handler: 'cacheFirst',
+				urlPattern: /[.]mp3$/,
+			}],
 		}),
 		new CopyWebpackPlugin([{
 			from: './manifest.json'
